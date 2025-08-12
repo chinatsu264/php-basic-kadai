@@ -17,12 +17,14 @@
             private $price;
 
             // コンストラクタを定義する
+            //newでオブジェクトを作るときに自動で実行される特別なメソッド
             public function __construct(string $name, int $price) {
                 $this->name = $name; 
                 $this->price = $price;
             }
-            
+
             //メゾッドの定義
+            //メゾッドは呼び出された時だけ実行される。
             function show_price () {
                 echo $this->price .  '<br>';
             }
@@ -36,13 +38,15 @@
             private $weight;
 
             // コンストラクタを定義する
-            public function __construct(string $name, int $height, string $weight) {
+            //newでオブジェクトを作るときに自動で実行される特別なメソッド
+            public function __construct(string $name, int $height, int $weight) {
                 $this->name = $name; 
                 $this->height = $height;
                 $this->weight = $weight;
             }
             
             //メゾッドの定義
+            //メゾッドは呼び出された時だけ実行される。
             function show_height () {
                 echo $this->height .  '<br>';
             }
@@ -65,8 +69,8 @@
         echo '<br>';
         print_r($dog);
         echo '<br>';
-        $potato->show_price();
-        $dog->show_height();
+        $potato->show_price(); //メゾッドの実行
+        $dog->show_height(); //メゾッドの実行
 
         ?>
     </p>
